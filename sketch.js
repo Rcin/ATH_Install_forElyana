@@ -22,8 +22,9 @@ function preload() {
   bodypix = ml5.bodyPix(options);
 }
 function setup() {
-  createCanvas(canvWidth, canvHeight);
-  
+  // createCanvas(canvWidth, canvHeight);
+  createCanvas(windowWidth, windowHeight);
+
   //VIDEO
   video = createCapture(VIDEO, videoReady);
   // video.size(width / vScale, height / vScale);
@@ -77,4 +78,8 @@ function gotResults(error, result) {
   }
   segmentation = result;
   bodypix.segment(video, gotResults);
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
