@@ -30,7 +30,7 @@ function setup() {
   video.size(videoWidth, videoHeight);  
 
   for (let i = 0; i < 5500; i++) {
-    particles[i] = new Particle(random(videoWidth)*4, random(videoHeight));
+    particles[i] = new Particle(random(videoWidth), random(videoHeight));
   }
   video.hide();
   
