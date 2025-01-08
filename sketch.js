@@ -26,7 +26,7 @@ function preload() {
 function setup() {
   createCanvas(canvWidth, canvHeight);
   // createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES);
+  // angleMode(DEGREES);
 
   //VIDEO
   video = createCapture(VIDEO, videoReady);
@@ -38,7 +38,7 @@ function setup() {
   for (let i = 0; i < 3000; i++) {
     particles[i] = new Particle(random(videoWidth), random(videoHeight));
   }
-  video.hide();
+  // video.hide();
   
   
   //TEXT
@@ -50,12 +50,6 @@ function setup() {
     streams.push(stream);
   }
   textSize(letterSize);
-}
-
-function rotateVideo(){
-  push();
-  translate(width/2, height/2);
-  rotate(90);
 }
 
 function videoReady() {
@@ -73,8 +67,10 @@ function draw() {
   streams.forEach(function (stream) {
     stream.render();
   });
+  // image(video, 0, 0, videoWidth, videoHeight);
+
   push();
-  translate(width, 0);
+  translate(width/2, 0);
   // translate(0, 0);
   scale(-1,1);
   // rotate(90);
