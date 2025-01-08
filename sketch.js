@@ -26,6 +26,7 @@ function preload() {
 function setup() {
   createCanvas(canvWidth, canvHeight);
   // createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
 
   //VIDEO
   video = createCapture(VIDEO, videoReady);
@@ -73,7 +74,8 @@ function draw() {
     stream.render();
   });
   push();
-  translate(width,0);
+  // translate(width, 0);
+  translate(0, 0);
   scale(-1,1);
   rotate(90);
   for (let i = 0; i < particles.length; i++) {
