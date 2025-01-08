@@ -4,8 +4,8 @@ let videoWidth = 640;
 let videoHeight = 480;
 let canvWidth = 1440;
 let canvHeight = 2560;
-let widthScale = canvWidth/videoWidth;
-let heightScale = canvHeight/videoHeight;
+let widthScale = canvWidth/videoWidth; //used in particles
+let heightScale = canvHeight/videoHeight; //used in particles
 let bodypix;
 let segmentation;
 // let vScale = 12;
@@ -18,6 +18,8 @@ const options = {
   outputStride: 32,
   segmentationThreshold: 0.5,
 };
+
+
 function preload() {
   bodypix = ml5.bodyPix(options);
 }
@@ -28,9 +30,11 @@ function setup() {
   //VIDEO
   video = createCapture(VIDEO, videoReady);
   // video.size(width / vScale, height / vScale);
+  
   video.size(videoWidth, videoHeight);  
 
-  for (let i = 0; i < 5500; i++) {
+
+  for (let i = 0; i < 3000; i++) {
     particles[i] = new Particle(random(videoWidth), random(videoHeight));
   }
   video.hide();
@@ -45,6 +49,12 @@ function setup() {
     streams.push(stream);
   }
   textSize(letterSize);
+}
+
+function rotateVideo(){
+  push();
+  translate(width/2, height/2);
+  rotate(90);
 }
 
 function videoReady() {
@@ -65,6 +75,7 @@ function draw() {
   push();
   translate(width,0);
   scale(-1,1);
+  rotation(90);
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].show();
@@ -80,6 +91,3 @@ function gotResults(error, result) {
   bodypix.segment(video, gotResults);
 }
 
-// function windowResized(){
-//   resizeCanvas(windowWidth, windowHeight);
-// }
