@@ -75,7 +75,7 @@ function draw() {
   push();
   translate(width,0);
   scale(-1,1);
-  rotation(90);
+  rotate(90);
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].show();
