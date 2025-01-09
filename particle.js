@@ -40,7 +40,7 @@ function Particle(x, y) {
 
       
       
-      fill(col[0], col[1], col[2], random(40, 60));
+      fill(col[0], col[1], col[2], random(70, 90));
       ellipse(this.x*widthScale, this.y*heightScale, this.r * 2, this.r * 2);
       
       // let n = noise(millis()/1000)
