@@ -12,8 +12,8 @@ function Particle(x, y) {
     this.x += random(-2, 2);
     this.y += random(-2, 2);
 
-    this.x = constrain(this.x, 0, videoWidth);
-    this.y = constrain(this.y, 0, videoHeight);
+    this.x = constrain(this.x, 0, canvWidth);
+    this.y = constrain(this.y, 0, canvHeight);
   };
 
   this.show = function () {
@@ -40,7 +40,7 @@ function Particle(x, y) {
 
       
       
-      fill(col[0], col[1], col[2], random(20, 40));
+      fill(col[0], col[1], col[2], random(40, 60));
       ellipse(this.x*widthScale, this.y*heightScale, this.r * 2, this.r * 2);
       
       // let n = noise(millis()/1000)

@@ -38,7 +38,7 @@ function setup() {
   for (let i = 0; i < 3000; i++) {
     particles[i] = new Particle(random(videoWidth), random(videoHeight));
   }
-  // video.hide();
+  video.hide();
   
   
   //TEXT
@@ -70,10 +70,9 @@ function draw() {
   image(video, 0, 0, videoWidth, videoHeight);
 
   push();
-  translate(width, 0);
-  // translate(0, 0);
+  translate(width, -height/3);
   scale(-1,1);
-  // rotate(90);
+
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].show();
