@@ -70,7 +70,8 @@ function draw() {
   image(video, 0, 0, videoWidth, videoHeight);
 
   push();
-  translate(width, -height/3);
+  // translate(width, -height/3);
+  translate(0, -height/3);
   // scale(-1,1);
 
   for (let i = 0; i < particles.length; i++) {
