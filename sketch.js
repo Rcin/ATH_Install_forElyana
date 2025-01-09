@@ -29,7 +29,7 @@ function setup() {
   // angleMode(DEGREES);
 
   //VIDEO
-  video = createCapture(VIDEO, videoReady);
+  video = createCapture(VIDEO,  videoReady);
   // video.size(width / vScale, height / vScale);
   
   video.size(videoWidth, videoHeight);  
@@ -67,18 +67,19 @@ function draw() {
   streams.forEach(function (stream) {
     stream.render();
   });
-  image(video, 0, 0, videoWidth, videoHeight);
+  // image(video, 0, 0, videoWidth, videoHeight);
 
   push();
   translate(width, -height/4);
   // translate(0, -height/3);
   scale(-0.9, 0.9);
-
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].show();
   }
+  
   pop();
+  
 }
 function gotResults(error, result) {
   if (error) {
