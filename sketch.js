@@ -71,7 +71,7 @@ function draw() {
 
   push();
   translate(width, -height/3);
-  scale(-1,1);
+  // scale(-1,1);
 
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
