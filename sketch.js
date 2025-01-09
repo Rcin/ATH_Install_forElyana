@@ -2,8 +2,8 @@ let img;
 let video;
 let videoWidth = 640;
 let videoHeight = 480;
-let canvWidth = 1080;
-let canvHeight = 1920;
+let canvWidth = 1440;
+let canvHeight = 2560;
 let widthScale = canvWidth/videoWidth; //used in particles
 let heightScale = canvHeight/videoHeight; //used in particles
 let bodypix;
@@ -70,7 +70,7 @@ function draw() {
   image(video, 0, 0, videoWidth, videoHeight);
 
   push();
-  translate(width, -height/3);
+  translate(width, -height/4);
   // translate(0, -height/3);
   scale(-1,1);
 
