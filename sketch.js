@@ -67,7 +67,7 @@ function draw() {
   streams.forEach(function (stream) {
     stream.render();
   });
-  // image(video, 0, 0, videoWidth, videoHeight);
+  image(video, 0, 0, videoWidth, videoHeight);
 
   push();
   translate(width, 0);
