@@ -57,7 +57,7 @@ function videoReady() {
 }
 
 function draw() {
-  frameRate(30);
+  frameRate(20);
   background(255);
   if (segmentation) {
     // console.log("segment received");
