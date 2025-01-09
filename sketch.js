@@ -35,7 +35,7 @@ function setup() {
   video.size(videoWidth, videoHeight);  
 
 
-  for (let i = 0; i < 3000; i++) {
+  for (let i = 0; i < 1200; i++) {
     particles[i] = new Particle(random(videoWidth), random(videoHeight));
   }
   video.hide();
@@ -57,7 +57,7 @@ function videoReady() {
 }
 
 function draw() {
-  frameRate(15);
+  frameRate(30);
   background(255);
   if (segmentation) {
     // console.log("segment received");
