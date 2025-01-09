@@ -57,7 +57,7 @@ function videoReady() {
 }
 
 function draw() {
-  frameRate(20);
+  frameRate(15);
   background(0);
   if (segmentation) {
     // console.log("segment received");
@@ -70,7 +70,7 @@ function draw() {
   // image(video, 0, 0, videoWidth, videoHeight);
 
   push();
-  translate(width/2, 0);
+  translate(width, 0);
   // translate(0, 0);
   scale(-1,1);
   // rotate(90);
