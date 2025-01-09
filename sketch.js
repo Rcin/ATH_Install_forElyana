@@ -58,7 +58,7 @@ function videoReady() {
 
 function draw() {
   frameRate(20);
-  background(255);
+  background(0);
   if (segmentation) {
     // console.log("segment received");
     img = segmentation.backgroundMask;

@@ -54,11 +54,11 @@ function Stream() {
   this.render = function () {
     this.letters.forEach(function (letter) {
       if (letter.first) {
-        // fill(255, 255, 255, letter.opacity);//white text
-        fill(0, 0, 0, letter.opacity);
+        fill(255, 255, 255, letter.opacity);//white text
+        // fill(0, 0, 0, letter.opacity); //black text
       } else {
-        // fill(255, 255, 255, letter.opacity);
-        fill(0, 0, 0, letter.opacity);
+        fill(255, 255, 255, letter.opacity);
+        // fill(0, 0, 0, letter.opacity); //black text
       }
       text(letter.value, letter.x, letter.y);
       letter.rain();
